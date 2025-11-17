@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(bundle install:*)",
+      "Bash(ruby run.rb:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
