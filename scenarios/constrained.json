@@ -1,0 +1,63 @@
+{
+  "scenario_id": "constrained",
+  "seed": 67890,
+  "initial_budget": 120,
+  "max_servers": 15,
+  "max_queue_size": 500,
+  "bankruptcy_threshold": 5,
+  "queues": {
+    "api": {
+      "initial_rate": 12,
+      "growth_factor": 0.025,
+      "heat_volatility": 0.10,
+      "spike_probability": 0.06,
+      "revenue_per_request": 5,
+      "timeout_threshold": 15
+    },
+    "batch": {
+      "initial_rate": 18,
+      "growth_factor": 0.03,
+      "heat_volatility": 0.08,
+      "spike_probability": 0.04,
+      "revenue_per_request": 3,
+      "timeout_threshold": 30
+    },
+    "premium": {
+      "initial_rate": 6,
+      "growth_factor": 0.035,
+      "heat_volatility": 0.12,
+      "spike_probability": 0.10,
+      "revenue_per_request": 10,
+      "timeout_threshold": 10
+    }
+  },
+  "server_types": {
+    "SMALL": {
+      "throughput": 5,
+      "cost_per_step": 2,
+      "warmup_time": 3,
+      "startup_cost": 10,
+      "switching_time": 3,
+      "switching_cost": 5,
+      "max_specialization": 0.15
+    },
+    "MEDIUM": {
+      "throughput": 15,
+      "cost_per_step": 5,
+      "warmup_time": 5,
+      "startup_cost": 30,
+      "switching_time": 4,
+      "switching_cost": 15,
+      "max_specialization": 0.20
+    },
+    "LARGE": {
+      "throughput": 40,
+      "cost_per_step": 12,
+      "warmup_time": 8,
+      "startup_cost": 80,
+      "switching_time": 5,
+      "switching_cost": 40,
+      "max_specialization": 0.25
+    }
+  }
+}
